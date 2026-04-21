@@ -1,2 +1,11 @@
 FROM atendai/evolution-api:v2.2.3
+
+ENV PORT=8080
+ENV SERVER_PORT=8080
+ENV AUTHENTICATION_API_KEY=baz2026secret
+ENV DATABASE_ENABLED=false
+ENV REDIS_ENABLED=false
+
 EXPOSE 8080
+
+CMD ["node", "dist/main.js"]
